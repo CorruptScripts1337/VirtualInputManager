@@ -1,0 +1,9 @@
+_G.SendKeyPress function(Key)
+    game:GetService("VirtualInputManager"):SendKeyEvent(true, Key, false, game)
+    game:GetService("VirtualInputManager"):SendKeyEvent(false, Key, false, game)
+end
+
+_G.SendMousePress function(X, Y)
+    game:GetService("VirtualInputManager"):SendMouseButtonEvent(X, Y, 0, true, game, 1)
+    game:GetService("VirtualInputManager"):SendMouseButtonEvent(X, Y, 0, false, game, 1)
+end
